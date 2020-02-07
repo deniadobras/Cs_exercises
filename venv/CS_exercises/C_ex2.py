@@ -17,7 +17,6 @@ with open(filename,'r') as lines_doc:
 
 print("Number of lines in the text file: ", len(data))
 
-
 with open(filename,'r') as unique_words:
     wordcount = {}
     for word in unique_words.read().split():

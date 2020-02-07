@@ -1,6 +1,6 @@
 import json
 
-filename = "/Users/denia.dobras/PycharmProjects/Cs_exercises/venv/etc/scores/scores/9b.json"
+filename = "/Users/denia.dobras/PycharmProjects/Cs_exercises/venv/etc/scores/9a.json"
 
 with open(filename) as scores_json:
     scores_json = json.load(scores_json)
@@ -28,6 +28,11 @@ string = "Math: " + "min " + str(math_dict["math"][0]) + ", max " + str(math_dic
          "Literature: " + "min " + str(lit_dict["literature"][0]) + ", max " + str(lit_dict["literature"][1]) + ", average "  + str(lit_dict["literature"][2])
 print(string)
 
-
-with open("/Users/denia.dobras/PycharmProjects/Cs_exercises/venv/etc/scores/scores/9a_average.json", "w") as f:
-    f.write(string)
+if filename is "/Users/denia.dobras/PycharmProjects/Cs_exercises/venv/etc/scores/9a.json":
+    with open("/Users/denia.dobras/PycharmProjects/Cs_exercises/venv/etc/scores/9a_average.json", "w") as f:
+        f.write(string)
+elif filename is "/Users/denia.dobras/PycharmProjects/Cs_exercises/venv/etc/scores/9b.json":
+    with open("/Users/denia.dobras/PycharmProjects/Cs_exercises/venv/etc/scores/9b_average.json", "w") as f:
+        f.write(string)
+else:
+    print("This is a different file!")
